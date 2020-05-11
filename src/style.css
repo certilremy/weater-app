@@ -1,0 +1,108 @@
+body{
+    background-color: rgb(173, 206, 235);
+    color: rgb(100, 100, 100);
+}
+
+header {
+    max-width: 1600px;
+    max-height: 50px;
+    background-color: rgb(100, 100, 100);
+    top: 0;
+    color: white;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+   padding-bottom: 10px;
+}
+
+header nav ul {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav .logo{
+    margin-left: 20px;
+}
+
+.main{
+    display: flex;
+    max-height: 700px;
+    margin: auto;
+    max-width: 1200pxpx;
+    justify-content: center;
+}
+
+.main .form-data{
+    margin-top: 50px;
+ max-width: 500px;
+ min-width: 500px;
+ margin-right: 40px;
+}
+
+.main .data-container{
+    margin-top: 50px;
+    max-width: 500px;
+    min-width: 500px;
+    justify-content: center;
+    border: 1px solid rgb(100, 100, 100);
+}
+
+form{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+form label ,form input{
+    margin-bottom: 10px;
+    color: rgb(100, 100, 100);
+}
+
+form input {
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+    width: 300px;
+}
+.form-group{
+    width: 100%;
+}
+#city-sender{
+    color: white;
+    background-color: rgb(100, 100, 100);
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+
+}
+
+.city-condition{
+    border-bottom: 1px solid rgb(100, 100, 100);
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+}
+
+.city-condition .fas{
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+.data-container ul li {
+    list-style: none;
+}
