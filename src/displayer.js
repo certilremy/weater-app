@@ -13,7 +13,11 @@ const displayer = (() => {
     tempMin.innerHTML = `Temperature min: ${data.main.temp_min}`;
     wendSpeed.innerHTML = `Wind speed: ${data.wind.speed}`;
   };
-  return { displayCityData };
+
+  const displayError = () => {
+    cityname.innerHTML = "Sorry we can't find weather for the provided city";
+  };
+  return { displayCityData, displayError };
 })();
 
 export default displayer;
