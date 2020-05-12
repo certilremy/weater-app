@@ -2,6 +2,18 @@ const utils = (() => {
   const cleaerDom = (data) => {
     data.value = '';
   };
+
+  const clearDomError = (img, weatherSkyInfo, temp, tempMax, tempMin, wendSpeed, cloudGif) => {
+    const celciusContainer = document.querySelector('.celcius-option');
+    celciusContainer.style.display = 'none';
+    img.src = '';
+    weatherSkyInfo.innerHTML = '';
+    temp.innerHTML = '';
+    tempMax.innerHTML = '';
+    tempMin.innerHTML = '';
+    wendSpeed.innerHTML = '';
+    cloudGif.src = '';
+  };
   const displayIconForCondition = (data, cloudIndicator) => {
     if (data.weather[0].main === 'Thunderstorm') {
       cloudIndicator.src = 'https://www.animatedimages.org/data/media/148/animated-weather-image-0004.gif';
@@ -19,7 +31,7 @@ const utils = (() => {
       cloudIndicator.src = 'https://www.animatedimages.org/data/media/148/animated-weather-image-0006.gif';
     }
   };
-  return { cleaerDom, displayIconForCondition };
+  return { cleaerDom, displayIconForCondition, clearDomError };
 })();
 
 

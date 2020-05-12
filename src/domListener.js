@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import getData from './getData';
 import utils from './utils';
 
@@ -14,7 +15,9 @@ const domListener = (() => {
   };
 
   const listenForConversion = () => {
+    const celciusContainer = document.querySelector('.celcius-option');
     const fahr = document.getElementById('fahrenheit');
+    celciusContainer.style.display = 'block';
     fahr.addEventListener('click', getData.getWeatherFahrenheit);
   };
   return { listenForQuery, listenForConversion };

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import displayer from './displayer';
 
 const handleError = (() => {

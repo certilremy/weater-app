@@ -3,6 +3,7 @@ import utils from './utils';
 import domListener from './domListener';
 
 const displayer = (() => {
+  const infoWeatherContainer = document.querySelector('.info-weather');
   const applicationHelp = document.getElementById('application-help');
   const cityname = document.getElementById('city-name');
   const weatherSkyInfo = document.getElementById('weather-sky-info');
@@ -13,6 +14,7 @@ const displayer = (() => {
   const img = document.getElementById('city-image-condition');
   const wendSpeed = document.getElementById('wind-speed');
   const displayCityData = (data) => {
+    infoWeatherContainer.style.display = 'block';
     img.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     applicationHelp.style.display = 'none';
     cityname.innerHTML = `Weather for ${data.name} country code ${data.sys.country} `;
@@ -27,7 +29,7 @@ const displayer = (() => {
 
   const displayError = () => {
     cityname.innerHTML = "Sorry we can't find weather for the provided city";
-    // listData.style.display = 'none;';
+    utils.clearDomError(img, weatherSkyInfo, temp, tempMax, tempMin, wendSpeed, cloudGif);
   };
   return { displayCityData, displayError };
 })();
