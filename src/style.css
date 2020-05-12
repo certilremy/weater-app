@@ -135,3 +135,17 @@ margin-right: 30px;
     font-size: 70px;
     margin-bottom: 20px;
 }
+
+.city-image-condition{
+    max-width: 50px;
+    max-height: 50px;
+}
+
+#cloud-gif{
+    max-width: 100px;
+    min-width: 100px;
+    max-height: 100px;
+    min-height: 100px;
+    margin-left: 100px;
+    margin-top: 20px;
+}

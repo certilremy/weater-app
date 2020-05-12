@@ -4,14 +4,14 @@ const displayer = (() => {
   const applicationHelp = document.getElementById('application-help');
   const cityname = document.getElementById('city-name');
   const weatherSkyInfo = document.getElementById('weather-sky-info');
-  const cloudIndicator = document.getElementById('cloud-indicator');
+  const cloudGif = document.getElementById('cloud-gif');
   const temp = document.getElementById('temp');
   const tempMax = document.getElementById('temp_max');
   const tempMin = document.getElementById('temp_min');
-  // const weatherDesct = document.getElementById('weather-desc');
+  const img = document.getElementById('city-image-condition');
   const wendSpeed = document.getElementById('wind-speed');
   const displayCityData = (data) => {
-    console.log(data.weather[0].main);
+    img.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     applicationHelp.style.display = 'none';
     cityname.innerHTML = `Weather for ${data.name} country code ${data.sys.country} `;
     weatherSkyInfo.innerHTML = `${data.weather[0].description}`;
@@ -19,7 +19,7 @@ const displayer = (() => {
     tempMax.innerHTML = `Temperature max: ${data.main.temp_max}`;
     tempMin.innerHTML = `Temperature min: ${data.main.temp_min}`;
     wendSpeed.innerHTML = `Wind speed: ${data.wind.speed}`;
-    utils.displayIconForCondition(data, cloudIndicator);
+    utils.displayIconForCondition(data, cloudGif);
   };
 
   const displayError = () => {
