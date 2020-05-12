@@ -11,7 +11,7 @@ const displayer = (() => {
   // const weatherDesct = document.getElementById('weather-desc');
   const wendSpeed = document.getElementById('wind-speed');
   const displayCityData = (data) => {
-    console.log(data);
+    console.log(data.weather[0].main);
     applicationHelp.style.display = 'none';
     cityname.innerHTML = `Weather for ${data.name} country code ${data.sys.country} `;
     weatherSkyInfo.innerHTML = `${data.weather[0].description}`;
@@ -19,7 +19,7 @@ const displayer = (() => {
     tempMax.innerHTML = `Temperature max: ${data.main.temp_max}`;
     tempMin.innerHTML = `Temperature min: ${data.main.temp_min}`;
     wendSpeed.innerHTML = `Wind speed: ${data.wind.speed}`;
-    cloudIndicator.innerHTML = utils.displayIconForCondition(data);
+    utils.displayIconForCondition(data, cloudIndicator);
   };
 
   const displayError = () => {
