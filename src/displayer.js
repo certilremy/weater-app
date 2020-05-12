@@ -1,4 +1,5 @@
 const displayer = (() => {
+  // const listData = document.getElementById('list-data');
   const cityname = document.getElementById('city-name');
   const temp = document.getElementById('temp');
   const tempMax = document.getElementById('temp_max');
@@ -6,6 +7,8 @@ const displayer = (() => {
   const weatherDesct = document.getElementById('weather-desc');
   const wendSpeed = document.getElementById('wind-speed');
   const displayCityData = (data) => {
+    console.log(data);
+    // listData.style.display = 'block;';
     cityname.innerHTML = `Weather for ${data.name} country code ${data.sys.country} `;
     weatherDesct.innerHTML = `Weather info: ${data.weather[0].description}`;
     temp.innerHTML = `Temperature: ${data.main.temp}`;
@@ -16,6 +19,7 @@ const displayer = (() => {
 
   const displayError = () => {
     cityname.innerHTML = "Sorry we can't find weather for the provided city";
+    // listData.style.display = 'none;';
   };
   return { displayCityData, displayError };
 })();
