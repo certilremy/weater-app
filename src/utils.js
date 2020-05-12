@@ -1,6 +1,6 @@
 const utils = (() => {
-  const cleaerDom = () => {
-    console.log('dom cleaned');
+  const cleaerDom = (data) => {
+    data.value = '';
   };
   return { cleaerDom };
 })();
