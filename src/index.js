@@ -2,4 +2,4 @@
 import css from './style.css';
 import getData from './getData';
 
-const info = getData.getWeatherCelcius('Gonaiv');
+const info = getData.getWeatherFahrenheit('Lagos');
