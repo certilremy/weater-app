@@ -1,4 +1,6 @@
+/* eslint-disable import/no-cycle */
 import utils from './utils';
+import domListener from './domListener';
 
 const displayer = (() => {
   const applicationHelp = document.getElementById('application-help');
@@ -20,6 +22,7 @@ const displayer = (() => {
     tempMin.innerHTML = `Temperature min: ${data.main.temp_min}`;
     wendSpeed.innerHTML = `Wind speed: ${data.wind.speed}`;
     utils.displayIconForCondition(data, cloudGif);
+    domListener.listenForConversion();
   };
 
   const displayError = () => {
