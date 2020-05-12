@@ -1,5 +1,5 @@
 const displayer = (() => {
-  // const listData = document.getElementById('list-data');
+  const applicationHelp = document.getElementById('application-help');
   const cityname = document.getElementById('city-name');
   const temp = document.getElementById('temp');
   const tempMax = document.getElementById('temp_max');
@@ -8,7 +8,7 @@ const displayer = (() => {
   const wendSpeed = document.getElementById('wind-speed');
   const displayCityData = (data) => {
     console.log(data);
-    // listData.style.display = 'block;';
+    applicationHelp.style.display = 'none';
     cityname.innerHTML = `Weather for ${data.name} country code ${data.sys.country} `;
     weatherDesct.innerHTML = `Weather info: ${data.weather[0].description}`;
     temp.innerHTML = `Temperature: ${data.main.temp}`;
