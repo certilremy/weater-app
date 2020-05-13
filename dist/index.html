@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEATHER APP</title>
+    <link rel="stylesheet" href="./main.css" />
+    <script
+      src="https://kit.fontawesome.com/f0664007b8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <h2>
+            AWESOME WEATHER
+          </h2>
+        </div>
+        <ul>
+          <li>
+            <a href="#">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="main">
+      <div class="form-data">
+        <form id="city-name-form">
+          <label for="city-name">City Name</label>
+          <div class="form-group">
+            <input type="text" id="city-name-input" value="" />
+            <button id="city-sender" type="submit">Search</button>
+          </div>
+        </form>
+
+        <img src="" alt="" id="cloud-gif">
+      </div>
+      <div class="data-container">
+        <div class="city-condition">
+          <h3 id="city-name">Welcome to awesome weather!</h3>
+        </div>
+        <div id="help">
+            <p id="application-help"> Enter a city or country name to view the weather!</p>
+        </div>
+        <div class="info-weather">
+          <ul id="list-data">
+            <li id="temp"></li>
+            <li id="temp_max"></li>
+            <li id="temp_min"></li>
+            <li id="weather-desc"></li>
+            <li id="wind-speed"></li>
+          </ul>
+          <div class="condition">
+            <h4 id="weather-sky-info"></h4>
+           <img id="city-image-condition" src="" alt="">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="option">
+
+      <div class="celcius-option" style="display: none;">
+        <h4>The data displayed here are in celcius by default, Chose your favorite conversion below</h4>
+        <button id="fahrenheit">Fahrenheit</button>
+      </div>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>
